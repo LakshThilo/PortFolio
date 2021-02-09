@@ -1,0 +1,425 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Montserrat:ital,wght@0,100;0,200;0,600;0,700;1,100&family=Poppins:wght@100;200;300;400;500;600;900&family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,500;1,700&family=Sriracha&family=Ubuntu:ital,wght@0,300;0,400;0,700;1,500&display=swap");
+
+* {
+  box-sizing: border-box;
+  text-decoration: none;
+  outline: none;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/*the font size of the HTML elemtn is equals to 16 pixels, here i've convert one rem into 10 pixels,
+ so for that we have to decrease the font sizee of the HTML element*/
+/* html {
+  font-size: 62.5%;
+} */
+
+:root {
+  --primary-color: #2b81e4;
+  --secondary-color: #eee;
+  --white-color: #fff;
+  --grey-color: #555;
+  --light-grey-color: #777;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav-content {
+  padding: 0 60px;
+  margin: 20px;
+  /* border: 0.1rem solid white; */
+}
+
+/* navbar styling */
+.navbar {
+  position: fixed;
+  width: 100%;
+  padding: 15px 0;
+  /* background: var(--primary-color); */
+  font-family: "Ubuntu", sans-serif;
+  /* border: 0.1rem solid white; */
+  transition: all 0.6s ease;
+}
+
+.navbar.sticky {
+  padding: 1px 0;
+  background: var(--primary-color);
+}
+
+.navbar .nav-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar .logo a {
+  color: var(--white-color);
+  font-size: 45px;
+  font-weight: 600;
+}
+
+.navbar .logo a span {
+  color: var(--primary-color);
+}
+
+.navbar.sticky .logo a span {
+  color: black;
+}
+
+.navbar .menu {
+  display: flex;
+  flex-direction: row;
+  /* margin-left: 60px; */
+}
+
+.navbar .menu li a {
+  color: var(--white-color);
+  font-size: 25px;
+  font-weight: 400;
+  margin-left: 25px;
+  transition: color 0.3s ease;
+}
+
+.navbar .menu li a:hover {
+  color: var(--primary-color);
+}
+
+.navbar.sticky .menu li a:hover {
+  color: var(--white-color);
+}
+
+/* menu-btn  */
+
+.menu-btn {
+  color: var(--white-color);
+  font-size: 23px;
+  cursor: pointer;
+  display: none;
+}
+
+/* home */
+.home {
+  display: flex;
+  background: url("images/hacker-2.jpg") no-repeat center;
+  background-size: cover;
+  height: 100vh;
+  color: var(--white-color);
+  min-height: 500px;
+  font-family: "Ubuntu", sans-serif;
+  /* border: 0.1rem solid white; */
+}
+
+.home-container {
+  position: relative;
+  margin: 40px;
+  margin-left: 60px;
+  width: 100%;
+  height: 200px;
+  padding: 6px 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /* border: 0.1rem solid white; */
+}
+
+.home .home-content {
+  position: absolute;
+}
+
+.pro-effect {
+  /* border: 1px solid white; */
+  position: absolute;
+  height: fit-content;
+  right: 150px;
+  width: fit-content;
+  display: inline-block;
+}
+
+.home .home-content .text-1 {
+  font-size: 27px;
+  margin: auto 0 auto 20px;
+}
+
+.home .home-content .text-2 {
+  font-size: 75px;
+  font-weight: 600;
+  margin-left: 3px;
+}
+
+.home .home-content .text-3 {
+  font-size: 40px;
+  margin: 5px 0;
+}
+
+.home .home-content .text-3 span {
+  color: var(--primary-color);
+  font-weight: 500;
+}
+
+.home .home-content a {
+  background: var(--primary-color);
+  display: inline-block;
+  padding: 12px 36px;
+  font-size: 20px;
+  margin-top: 20px;
+  border-radius: 4px;
+  color: white;
+  border: 2px solid white;
+  font-family: "Montserrat";
+}
+
+/* media query start */
+
+@media only screen and (max-width: 1200px) {
+  .logo {
+    margin: 10px;
+    padding: 0;
+    margin-left: 2px;
+  }
+
+  .menu-content {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+
+  .menu-content .menu {
+    padding-right: 2px;
+  }
+
+  .nav-content .menu-content .menu .contact {
+    padding-right: 4px;
+  }
+
+  .home-container {
+    margin: 40px;
+  }
+
+  .pro-effect {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 1025px) {
+  .logo {
+    margin: 10px;
+    padding: 0;
+    margin-left: 2px;
+  }
+
+  .menu-content {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+
+  .menu-content .menu {
+    padding-right: 2px;
+  }
+
+  .nav-content .menu-content .menu .contact {
+    padding-right: 4px;
+  }
+
+  .home-container {
+    margin: 40px;
+  }
+
+  .pro-effect {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 860px) {
+  .home.active {
+    background: #111;
+  }
+  .logo {
+    /* display: none; */
+
+    position: absolute;
+    top: 35px;
+  }
+  .logo.active {
+    display: none;
+  }
+  .home-container.active {
+    display: none;
+  }
+
+  .home-content.active {
+    display: none;
+  }
+
+  .menu-content {
+    position: flex;
+    top: 0;
+    left: 0;
+    width: 760px;
+    height: 100vh;
+    padding-top: 80px;
+    /* border: 1px solid red; */
+  }
+
+  .menu-content .menu {
+    position: fixed;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    /* border: 1px solid white; */
+    width: 100%;
+    top: 0;
+    left: -100%;
+    transition: all 0.3s ease;
+  }
+
+  .menu-content .menu.active {
+    left: 0;
+  }
+
+  .nav-content .logo.active {
+    display: none;
+  }
+
+  .menu-content .menu .nav-item {
+    padding: 8px;
+    margin: 16px 8px;
+    /* border: 1px solid blue; */
+  }
+
+  .menu-content .menu li a {
+    font-size: 30px;
+    font-weight: 500;
+  }
+
+  .nav-content .menu-btn {
+    position: absolute;
+    display: block;
+    top: 60px;
+    right: 80px;
+    font-size: 30px;
+    z-index: 999;
+  }
+  p {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 610px) {
+  .home {
+    background: #111;
+  }
+  .home.active {
+    background: #111;
+  }
+
+  .logo,
+  .home-container {
+    display: none;
+  }
+
+  .menu-content .menu {
+    position: fixed;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    width: 100%;
+    top: 0;
+    left: 0;
+  }
+
+  .nav-content .menu-btn {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .home {
+    background: #111;
+  }
+
+  .home-content,
+  .pro-effect,
+  .logo {
+    display: none;
+  }
+
+  .menu-content {
+    position: flex;
+    top: 0;
+    left: 0;
+    width: 760px;
+    height: 100vh;
+    padding-top: 80px;
+    /* border: 1px solid red; */
+  }
+
+  .menu-content .menu {
+    position: fixed;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    width: 100%;
+    top: 0;
+    left: 0;
+  }
+
+  .menu-content .menu .nav-item {
+    padding: 8px;
+  }
+
+  .menu-content .menu .nav-item a {
+    font-size: 28px;
+    font-weight: 500;
+  }
+
+  .nav-content .menu-btn {
+    position: absolute;
+    top: 40px;
+    right: 60px;
+    font-size: 35px;
+    color: #fff;
+    cursor: pointer;
+  }
+}
+
+@media only screen and (max-width: 340px) {
+  .menu-content .menu {
+    position: fixed;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    width: 100%;
+    top: 0;
+    left: 0;
+  }
+
+  .menu-content .menu .nav-item a {
+    font-size: 24px;
+    font-weight: 500;
+    text-align: center;
+    padding: 10px;
+    margin: 0;
+    /* border: 1px solid red; */
+  }
+
+  .nav-content .menu-btn {
+    position: absolute;
+    top: 40px;
+    right: 60px;
+    font-size: 35px;
+    color: #fff;
+    cursor: pointer;
+  }
+}
